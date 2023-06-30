@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.study.board.entity.Board;
 
-@Mapper
+//@Mapper
 public interface BoardMapper {
 	
 	List<Board> getBoardList();

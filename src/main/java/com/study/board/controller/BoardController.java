@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.study.board.entity.Board;
@@ -22,6 +23,11 @@ public class BoardController {
 	@GetMapping("/board")
 	public List<Board> getBoardList(){
 		return boardService.getBoardList();
+	}
+	
+	@GetMapping("/board/{id}")
+	public Board getBoardById(@PathVariable Long id) {
+		return boardService.getBoardById(id);
 	}
 	
 }
